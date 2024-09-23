@@ -1,0 +1,74 @@
+﻿<Window x:Class="EncounterCounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pokémon Encounter Counter" Height="400" Width="600">
+    <Grid>
+        <!-- Search TextBox -->
+        <TextBox x:Name="pokemonSearchBox" 
+                 HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="10,10,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="200" 
+                 TextChanged="PokemonSearchBox_TextChanged"
+                 VerticalContentAlignment="Center" />
+
+        <!-- ListBox for showing the Pokémon list with Image and Name -->
+        <ListBox x:Name="pokemonListBox" 
+                 HorizontalAlignment="Left" 
+                 Height="200" 
+                 Margin="10,40,0,0" 
+                 VerticalAlignment="Top" 
+                 Width="200" 
+                 SelectionChanged="PokemonListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Icon}" Width="30" Height="30" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Label to display the current Pokémon being hunted -->
+        <Label x:Name="currentPokemonLabel" 
+               Content="Currently hunting: None" 
+               HorizontalAlignment="Left" 
+               Margin="220,40,0,0" 
+               VerticalAlignment="Top" />
+
+        <!-- Image to display the icon of the selected Pokémon -->
+        <Image x:Name="selectedPokemonIcon"
+               Width="100"
+               Height="100"
+               HorizontalAlignment="Left"
+               Margin="220,70,0,0"
+               VerticalAlignment="Top"/>
+
+        <!-- Label to display the number of encounters -->
+        <Label x:Name="encounterCountLabel" 
+               Content="Encounters: 0" 
+               HorizontalAlignment="Left" 
+               Margin="220,180,0,0" 
+               VerticalAlignment="Top" />
+
+        <!-- Button to add an encounter -->
+        <Button x:Name="addEncounterButton" 
+                Content="Add Encounter" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="120" 
+                Margin="220,220,0,0" 
+                Click="AddEncounterButton_Click" />
+
+        <!-- Button to mark a shiny Pokémon -->
+        <Button x:Name="shinyButton" 
+                Content="Mark as Shiny" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="120" 
+                Margin="220,260,0,0" 
+                Click="ShinyButton_Click" />
+    </Grid>
+</Window>
