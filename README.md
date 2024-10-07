@@ -1,5 +1,5 @@
 # Pokémon Encounter Counter
-The reason it has Pokemon only from Gen 1 to 5 is because I made this mainly for PokeMMO. This is a simple Pokémon encounter counter application built using C#, which allows users to track encounters while hunting for shiny Pokémon. The app fetches Pokémon data (Gen 1 to 5) from the PokéAPI, displays their names and icons, and lets users add encounters and mark Pokémon as shiny. The encounter data is saved automatically when the application is closed. For the exe just unzip the .rar file and you're good to go.
+The reason it has Pokemon only from Gen 1 to 5 is because I made this mainly for PokeMMO. This is a simple Pokémon encounter counter application built using C#, which allows users to track encounters while hunting for shiny Pokémon. The app fetches Pokémon data (Gen 1 to 5) from the PokéAPI, displays their names and icons, and lets users add encounters and mark Pokémon as shiny. The encounter data is saved automatically when the application is closed.
 
 ## Features
 
